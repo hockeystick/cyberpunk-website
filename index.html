@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore the neon-lit digital frontier. Experience the future of technology with cutting-edge cyberpunk aesthetics.">
+    <meta name="keywords" content="cyberpunk, technology, future, neon, digital">
+    <meta name="author" content="Cyberpunk Industries">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cyberpunk Industries - The Digital Frontier">
+    <meta property="og:description" content="Explore the neon-lit digital frontier">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    <meta property="og:url" content="https://cyberpunk-industries.com">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cyberpunk Industries">
+    <meta name="twitter:description" content="Explore the neon-lit digital frontier">
+
+    <!-- Performance & Security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Accessibility -->
+    <meta name="theme-color" content="#0a0e27">
+    <meta name="color-scheme" content="dark">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+
+    <title>Cyberpunk Industries | The Digital Frontier</title>
+
+    <!-- Critical CSS - Inline for performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;background:#0a0e27;color:#e0e0e0;line-height:1.6;overflow-x:hidden}
+        .skip-link{position:absolute;top:-40px;left:0;background:#00ffff;color:#000;padding:8px;z-index:100;text-decoration:none}
+        .skip-link:focus{top:0}
+    </style>
+
+    <!-- Main stylesheet - Deferred for performance -->
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Cookie Consent Banner (GDPR/CCPA Compliant) -->
+    <aside id="cookie-consent" class="cookie-consent" role="dialog" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description" hidden>
+        <div class="cookie-consent__content">
+            <h2 id="cookie-consent-title" class="cookie-consent__title">Your Privacy Matters</h2>
+            <p id="cookie-consent-description" class="cookie-consent__description">
+                We use essential cookies to ensure our website functions properly. With your consent, we may also use analytics cookies to improve your experience. You can manage your preferences at any time.
+            </p>
+            <div class="cookie-consent__buttons">
+                <button id="cookie-accept-all" class="btn btn--primary" aria-label="Accept all cookies">
+                    Accept All
+                </button>
+                <button id="cookie-essential" class="btn btn--secondary" aria-label="Accept essential cookies only">
+                    Essential Only
+                </button>
+                <button id="cookie-settings" class="btn btn--tertiary" aria-label="Customize cookie settings">
+                    Customize
+                </button>
+            </div>
+            <a href="privacy.html" class="cookie-consent__link">View Privacy Policy</a>
+        </div>
+    </aside>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav__brand">
+                    <a href="/" class="logo" aria-label="Cyberpunk Industries Home">
+                        <span class="logo__text" aria-hidden="true">CYBER<span class="logo__accent">PUNK</span></span>
+                    </a>
+                </div>
+
+                <button class="nav__toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+
+                <ul id="nav-menu" class="nav__menu" role="list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#tech" class="nav__link">Technology</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">
+                        Welcome to the <span class="glitch" data-text="Digital Frontier">Digital Frontier</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#contact" class="btn btn--primary btn--lg">Get Started</a>
+                        <a href="#about" class="btn btn--outline btn--lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero__visual" aria-hidden="true">
+                    <div class="neon-grid"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section--about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section__title">About <span class="accent">Our Vision</span></h2>
+                <div class="section__content">
+                    <div class="feature-grid">
+                        <article class="feature-card" data-aos="fade-up">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Real-Time Processing</h3>
+                            <p class="feature-card__description">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                            </p>
+                        </article>
+
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Neural Architecture</h3>
+                            <p class="feature-card__description">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.
+                            </p>
+                        </article>
+
+                        <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0110 0v4"/>
+                                </svg>
+                            </div>
+                            <h3 class="feature-card__title">Quantum Security</h3>
+                            <p class="feature-card__description">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section section--services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section__title">Our <span class="accent">Services</span></h2>
+                <div class="section__content">
+                    <div class="services-grid">
+                        <div class="service-item" data-aos="slide-right">
+                            <span class="service-item__number" aria-hidden="true">01</span>
+                            <h3 class="service-item__title">Cybernetic Integration</h3>
+                            <p class="service-item__description">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis.
+                            </p>
+                            <a href="#contact" class="service-item__link">Explore More →</a>
+                        </div>
+
+                        <div class="service-item" data-aos="slide-right" data-aos-delay="100">
+                            <span class="service-item__number" aria-hidden="true">02</span>
+                            <h3 class="service-item__title">Data Fortress Solutions</h3>
+                            <p class="service-item__description">
+                                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                            </p>
+                            <a href="#contact" class="service-item__link">Explore More →</a>
+                        </div>
+
+                        <div class="service-item" data-aos="slide-right" data-aos-delay="200">
+                            <span class="service-item__number" aria-hidden="true">03</span>
+                            <h3 class="service-item__title">Neural Network Design</h3>
+                            <p class="service-item__description">
+                                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.
+                            </p>
+                            <a href="#contact" class="service-item__link">Explore More →</a>
+                        </div>
+
+                        <div class="service-item" data-aos="slide-right" data-aos-delay="300">
+                            <span class="service-item__number" aria-hidden="true">04</span>
+                            <h3 class="service-item__title">Quantum Computing</h3>
+                            <p class="service-item__description">
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                            </p>
+                            <a href="#contact" class="service-item__link">Explore More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="tech" class="section section--tech" aria-labelledby="tech-title">
+            <div class="container">
+                <h2 id="tech-title" class="section__title">Advanced <span class="accent">Technology</span></h2>
+                <div class="section__content">
+                    <div class="tech-showcase">
+                        <div class="tech-showcase__content">
+                            <h3 class="tech-showcase__subtitle">Next-Gen Solutions</h3>
+                            <p class="tech-showcase__description">
+                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+                            </p>
+                            <p class="tech-showcase__description">
+                                Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                            </p>
+                            <ul class="tech-list">
+                                <li class="tech-list__item">
+                                    <svg class="tech-list__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    Temporal mechanics integration
+                                </li>
+                                <li class="tech-list__item">
+                                    <svg class="tech-list__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    Bio-digital interface compatibility
+                                </li>
+                                <li class="tech-list__item">
+                                    <svg class="tech-list__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    Encrypted mesh networking
+                                </li>
+                                <li class="tech-list__item">
+                                    <svg class="tech-list__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                    Autonomous decision matrices
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tech-showcase__visual" aria-hidden="true">
+                            <div class="data-matrix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section section--contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section__title">Get In <span class="accent">Touch</span></h2>
+                <div class="section__content">
+                    <form class="contact-form" id="contact-form" aria-label="Contact form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                autocomplete="name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                autocomplete="email"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                class="form-input"
+                                autocomplete="off"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                class="form-input form-textarea"
+                                rows="5"
+                                required
+                                aria-required="true"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn--primary btn--lg">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">Cyberpunk Industries</h3>
+                    <p class="footer__text">
+                        Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.
+                    </p>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links" role="list">
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#services" class="footer__link">Services</a></li>
+                        <li><a href="#tech" class="footer__link">Technology</a></li>
+                        <li><a href="#contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Legal</h3>
+                    <ul class="footer__links" role="list">
+                        <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
+                        <li><a href="#" id="cookie-preferences" class="footer__link">Cookie Preferences</a></li>
+                        <li><a href="accessibility.html" class="footer__link">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__section">
+                    <h3 class="footer__title">Connect</h3>
+                    <div class="social-links" role="list">
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2025 Cyberpunk Industries. All rights reserved.
+                </p>
+                <p class="footer__compliance">
+                    <small>This site is GDPR & CCPA compliant. Built with accessibility in mind (WCAG 2.1 Level AA).</small>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript - Deferred for performance -->
+    <script src="js/app.js" defer></script>
+
+    <!-- Service Worker for PWA (Progressive Web App) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
+    </script>
+</body>
+</html>

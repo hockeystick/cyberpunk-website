@@ -1,0 +1,20 @@
+# Robots.txt for Cyberpunk Industries
+
+User-agent: *
+Allow: /
+
+# Crawl-delay (optional, adjust as needed)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://cyberpunk-industries.com/sitemap.xml
+
+# Disallow crawling of legal pages (optional)
+# Disallow: /privacy.html
+# Disallow: /terms.html
+
+# Allow all other pages
+Allow: /index.html
+Allow: /css/
+Allow: /js/
+Allow: /assets/
