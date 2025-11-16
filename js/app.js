@@ -108,10 +108,14 @@
     }
 
     openSettings() {
-      // In a real implementation, this would open a detailed settings modal
-      alert('Cookie settings: In production, this would open a detailed preference center where you can customize your cookie preferences.');
-      // For demo purposes, accept essential only
-      this.acceptEssential();
+      // For demo purposes, show banner with options
+      // In production, implement a full preference modal
+      this.showBanner();
+
+      // Focus the customize button for accessibility
+      if (this.settingsBtn) {
+        this.settingsBtn.focus();
+      }
     }
 
     saveConsent(consent) {
@@ -265,6 +269,11 @@
             // Set focus to target for accessibility
             target.setAttribute('tabindex', '-1');
             target.focus();
+
+            // Remove tabindex after focus to restore normal tab order
+            target.addEventListener('blur', () => {
+              target.removeAttribute('tabindex');
+            }, { once: true });
           }
         });
       });
@@ -297,8 +306,8 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('aos-animate');
-            // Optional: unobserve after animation
-            // observer.unobserve(entry.target);
+            // Unobserve after animation to prevent memory leaks
+            observer.unobserve(entry.target);
           }
         });
       }, options);
@@ -337,7 +346,8 @@
         isValid = false;
         errorMessage = 'This field is required';
       } else if (field.type === 'email' && value) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // More robust email validation
+        const emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
         if (!emailRegex.test(value)) {
           isValid = false;
           errorMessage = 'Please enter a valid email address';
@@ -353,12 +363,15 @@
       const existingError = field.parentElement.querySelector('.field-error');
       if (existingError) {
         existingError.remove();
+        field.removeAttribute('aria-describedby');
       }
 
       field.setAttribute('aria-invalid', !isValid);
 
       if (!isValid && message) {
+        const errorId = `${field.id}-error`;
         const errorEl = document.createElement('span');
+        errorEl.id = errorId;
         errorEl.className = 'field-error';
         errorEl.style.color = 'var(--color-error)';
         errorEl.style.fontSize = 'var(--font-size-sm)';
@@ -367,6 +380,7 @@
         errorEl.textContent = message;
         errorEl.setAttribute('role', 'alert');
         field.parentElement.appendChild(errorEl);
+        field.setAttribute('aria-describedby', errorId);
       }
     }
 
@@ -394,12 +408,22 @@
 
       // Get form data
       const formData = new FormData(this.form);
-      const data = Object.fromEntries(formData.entries());
+
+      // Polyfill for Object.fromEntries (IE11 compatibility)
+      let data;
+      if (typeof Object.fromEntries === 'function') {
+        data = Object.fromEntries(formData.entries());
+      } else {
+        data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+      }
 
       console.log('Form submitted:', data);
 
-      // In production, send to server
-      // For demo, show success message
+      // In production, send to server first, then reset on success
+      // For demo, show success message immediately
       this.showSuccessMessage();
     }
 
@@ -425,11 +449,15 @@
       }
 
       this.form.appendChild(successDiv);
+
+      // Reset form after showing success (in production, only after server confirms)
       this.form.reset();
 
       // Remove success message after 5 seconds
       setTimeout(() => {
-        successDiv.remove();
+        if (successDiv.parentNode) {
+          successDiv.remove();
+        }
       }, 5000);
     }
   }
@@ -551,24 +579,21 @@
 
     init() {
       // Show focus outline only when using keyboard
-      let mouseUser = false;
-
       document.addEventListener('mousedown', () => {
-        mouseUser = true;
         document.body.classList.add('using-mouse');
       });
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Tab') {
-          mouseUser = false;
           document.body.classList.remove('using-mouse');
         }
       });
 
-      // Add CSS for mouse users
+      // Add minimal CSS for mouse users - only hide default browser outline
+      // Custom focus styles (like buttons) will still show
       const style = document.createElement('style');
       style.textContent = `
-        body.using-mouse *:focus {
+        body.using-mouse *:focus:not(:focus-visible) {
           outline: none;
         }
       `;

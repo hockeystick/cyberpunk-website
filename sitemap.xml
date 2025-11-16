@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Note: Update URLs with your actual domain before deployment -->
   <url>
-    <loc>https://cyberpunk-industries.com/</loc>
+    <loc>/</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cyberpunk-industries.com/privacy.html</loc>
+    <loc>/privacy.html</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://cyberpunk-industries.com/terms.html</loc>
+    <loc>/terms.html</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://cyberpunk-industries.com/accessibility.html</loc>
+    <loc>/accessibility.html</loc>
     <lastmod>2025-11-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

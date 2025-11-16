@@ -395,6 +395,11 @@ body {
 }
 
 /* Glitch Effect */
+.glitch-wrapper {
+  position: relative;
+  display: inline;
+}
+
 .glitch {
   position: relative;
   color: var(--color-primary);

@@ -34,9 +34,6 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
 
-    <!-- Preload Critical Resources -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-
     <title>Cyberpunk Industries | The Digital Frontier</title>
 
     <!-- Critical CSS - Inline for performance -->
@@ -57,7 +54,7 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Cookie Consent Banner (GDPR/CCPA Compliant) -->
-    <aside id="cookie-consent" class="cookie-consent" role="dialog" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description" hidden>
+    <aside id="cookie-consent" class="cookie-consent" role="region" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description" aria-live="polite" hidden>
         <div class="cookie-consent__content">
             <h2 id="cookie-consent-title" class="cookie-consent__title">Your Privacy Matters</h2>
             <p id="cookie-consent-description" class="cookie-consent__description">
@@ -112,7 +109,7 @@
             <div class="container">
                 <div class="hero__content">
                     <h1 id="hero-title" class="hero__title">
-                        Welcome to the <span class="glitch" data-text="Digital Frontier">Digital Frontier</span>
+                        Welcome to the <span class="glitch-wrapper"><span class="glitch" data-text="Digital Frontier" aria-hidden="true">Digital Frontier</span><span class="sr-only">Digital Frontier</span></span>
                     </h1>
                     <p class="hero__subtitle">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
@@ -278,6 +275,9 @@
                 <h2 id="contact-title" class="section__title">Get In <span class="accent">Touch</span></h2>
                 <div class="section__content">
                     <form class="contact-form" id="contact-form" aria-label="Contact form">
+                        <!-- CSRF Token (placeholder - implement server-side token generation) -->
+                        <input type="hidden" name="csrf_token" value="PLACEHOLDER_TOKEN_REPLACE_WITH_SERVER_GENERATED">
+
                         <div class="form-group">
                             <label for="name" class="form-label">Name *</label>
                             <input
