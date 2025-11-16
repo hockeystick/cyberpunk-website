@@ -1,0 +1,29 @@
+<svg width="192" height="192" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="192" height="192" fill="#0a0e27"/>
+
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#00ffff" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  <rect width="192" height="192" fill="url(#grid)"/>
+
+  <!-- Main icon -->
+  <text x="96" y="120" font-family="Arial, sans-serif" font-size="72" font-weight="bold"
+        fill="#00ffff" text-anchor="middle">CP</text>
+
+  <!-- Glow effect -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="96" y="120" font-family="Arial, sans-serif" font-size="72" font-weight="bold"
+        fill="#00ffff" text-anchor="middle" filter="url(#glow)">CP</text>
+</svg>

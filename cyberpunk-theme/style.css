@@ -1,0 +1,26 @@
+/*
+Theme Name: Cyberpunk Industries
+Theme URI: https://cyberpunk-industries.com
+Author: Cyberpunk Industries
+Author URI: https://cyberpunk-industries.com
+Description: A high-performance, mobile-optimized cyberpunk-themed WordPress theme with GDPR/CCPA compliance, WCAG 2.1 Level AA accessibility, and modern web standards. Features neon aesthetics, smooth animations, and progressive web app capabilities.
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.4
+Requires PHP: 7.4
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: cyberpunk-industries
+Tags: one-column, custom-colors, custom-menu, editor-style, featured-images, full-width-template, theme-options, threaded-comments, translation-ready, accessibility-ready, dark
+
+Cyberpunk Industries WordPress Theme
+Copyright 2025 Cyberpunk Industries
+
+This theme is licensed under the MIT License.
+*/
+
+/*
+ * The main stylesheet is loaded from assets/css/main.css
+ * This file only contains the WordPress theme headers.
+ * All styles are enqueued via functions.php for better performance.
+ */
